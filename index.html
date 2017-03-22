@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>goods-release</title>
+    <link rel="stylesheet" href="/src/assets/css/reset.css">
+    <link rel="stylesheet" href="/src/assets/css/mer.css">
+    <script>
+       
+        if (/Android (\d+\.\d+)/.test(navigator.userAgent)) {
+            var version = parseFloat(RegExp.$1);
+            if (version > 2.3) {
+                var phoneScale = parseInt(window.screen.width) / 750;
+                if (/MZ-M571C/.test(navigator.userAgent)) {
+                    document.write('<meta name="viewport" content="width=750">');
+                } else {
+                    document.write('<meta name="viewport" content="width=750, minimum-scale = ' + phoneScale + ', maximum-scale = ' + phoneScale + ', target-densitydpi=device-dpi">');
+                }
+            } else {
+                document.write('<meta name="viewport" content="width=750, target-densitydpi=device-dpi">');
+            }
+        } else {
+            document.write('<meta name="viewport" content="width=750, user-scalable=no, target-densitydpi=device-dpi">');
+        }
+
+    </script>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="/dist/build.js"></script>
+  </body>
+</html>
