@@ -1,7 +1,7 @@
 # goods-release
 
 > home work
-
+> demo：http://sumingfeng.github.io/
 ## Build Setup
 
 ``` bash
